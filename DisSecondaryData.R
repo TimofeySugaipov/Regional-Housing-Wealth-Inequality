@@ -159,7 +159,7 @@ ggplot(fullset, aes(x = Year, y = `EAST ANGLIA`/1000, col = "East Anglia"))+
   geom_line(aes(x=Year, y=`WEST MIDS`/1000, col="West Midlands")) +
   geom_line(aes(x=Year, y=`YORK & HSIDE`/1000, col="York&H")) +
   ggtitle("Mean Housing Prices per Region 1995-2018") +
-  ylab("Price in £ Thousands ") +
+  ylab("Price in Â£ Thousands ") +
   theme(
     plot.title = element_text(colour = "black"),
     axis.title.x = element_text(colour = "light blue", size = 15),
@@ -233,7 +233,7 @@ ggplot(EAd, aes(x = Year, y = EastAnglia/1000, col = "East Anglia"))+
   geom_line(aes(x=Year, y=SouthEast/1000, col="South East")) +
   geom_line(aes(x=Year, y=SouthWest/1000, col="South West")) +
   geom_line(aes(x=Year, y=WestMidlands/1000, col="West Midlands")) +
-  ylab("Deviations in £ Thousands ")
+  ylab("Deviations in Â£ Thousands ")
 
 #---------------------------------------------- Gini calcs
 
@@ -386,7 +386,4 @@ for (i in 0:3){
   b = (mean(RegionLandReq$Price[RegionLandReq$Group  == i & RegionLandReq$Year == 2015]) - mean(RegionLandReq$Price[RegionLandReq$Group  == i & RegionLandReq$Year == 2014]))/mean(RegionLandReq$Price[RegionLandReq$Group  == i & RegionLandReq$Year == 2015])
   c = c(c,b)
 }
-
-ggplot(RegionalGinis, aes(x = Year, y = National, col = "National"))+
-  geom_smooth(se = F) +
   
